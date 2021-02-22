@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/10/06 23:05:13.000.891,=C:\Users\Vaz\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/12 19:52:21.000.375,=C:\Users\Vaz\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/21 23:44:00.189,=C:\Users\Vaz\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/21 23:45:05.419,C:\Users\Vaz\OneDrive\Documentos\Testes\MaqDinheiro\Unit1.dfm=C:\Users\Vaz\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/02/21 23:45:05.419,C:\Users\Vaz\OneDrive\Documentos\Testes\MaqDinheiro\Unit1.pas=C:\Users\Vaz\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/21 23:45:27.226,C:\Users\Vaz\OneDrive\Documentos\Testes\MaqDinheiro\ufrm_main.dfm=C:\Users\Vaz\OneDrive\Documentos\Testes\MaqDinheiro\Unit1.dfm</Transaction>
+    <Transaction>2021/02/21 23:45:27.226,C:\Users\Vaz\OneDrive\Documentos\Testes\MaqDinheiro\ufrm_main.pas=C:\Users\Vaz\OneDrive\Documentos\Testes\MaqDinheiro\Unit1.pas</Transaction>
+    <Transaction>2021/02/21 23:45:44.743,C:\Users\Vaz\OneDrive\Documentos\Testes\MaqDinheiro\QS7.dproj=C:\Users\Vaz\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/02/21 23:46:47.314,=C:\Users\Vaz\OneDrive\Documentos\Testes\MaqDinheiro\uIMaquina.pas</Transaction>
+    <Transaction>2021/02/21 23:46:47.319,=C:\Users\Vaz\OneDrive\Documentos\Testes\MaqDinheiro\uMaquina.pas</Transaction>
+    <Transaction>2021/02/21 23:46:47.324,=C:\Users\Vaz\OneDrive\Documentos\Testes\MaqDinheiro\uTroco.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

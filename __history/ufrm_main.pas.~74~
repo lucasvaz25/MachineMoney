@@ -1,0 +1,110 @@
+unit ufrm_main;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.ExtCtrls,
+  Vcl.Buttons,
+  Vcl.StdCtrls,
+  UTroco,
+  UMaquina;
+
+type
+  Tfrm_main = class( TForm )
+    Panel1: TPanel;
+    Edvalor: TLabeledEdit;
+    BtnTroco: TSpeedButton;
+    EdResultado: TMemo;
+    procedure FormCreate( Sender: TObject );
+    procedure FormDestroy( Sender: TObject );
+    procedure BtnTrocoClick( Sender: TObject );
+  private
+    { Private declarations }
+    Maquina: TMaquina;
+    procedure ValorValido( Str: string );
+  public
+    { Public declarations }
+    procedure Troco;
+  end;
+
+var
+  Frm_main: Tfrm_main;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure Tfrm_main.BtnTrocoClick( Sender: TObject );
+begin
+  Self.Troco;
+end;
+
+procedure Tfrm_main.FormCreate( Sender: TObject );
+begin
+  Maquina := TMaquina.Create;
+end;
+
+procedure Tfrm_main.FormDestroy( Sender: TObject );
+begin
+  if Assigned( Maquina ) then
+    Maquina.Destroy;
+end;
+
+procedure Tfrm_main.Troco;
+var
+  VlrTc: Double;
+  I: Integer;
+  List: TList;
+  S, C: string;
+begin
+  ValorValido( Edvalor.Text );
+  VlrTc := StrToFloat( Edvalor.Text );
+  if VlrTc < 0 then
+  begin
+    MessageDlg( 'Valor pago é inferior ao valor da conta!' + #13 + 'Não é possível informar o troco.', MtInformation, [ MbOK ], 0 );
+    Edvalor.SetFocus;
+    Exit;
+  end
+  else
+  begin
+    S     := '';
+    List  := Maquina.MontarTroco( VlrTc );
+    for I := 0 to List.Count - 1 do
+    begin
+      if I > 6 then
+        C := 'moeda'
+      else
+        C := 'nota;'
+
+                    S := S + IntToStr( TTroco( List[ I ] ).GetQuantidade ) + ' nota de ' + FloatToStr( TTroco( List[ I ] ).GetvalorCedula( TTroco( List[ I ] ).GetTipo ) ) + #13#10;
+    end;
+    EdResultado.Text := S;
+
+  end;
+end;
+
+procedure Tfrm_main.ValorValido( Str: string );
+var
+  Value: Double;
+begin
+  try
+    if Str <> EmptyStr then
+      Value := StrToFloat( Str )
+    else
+      raise Exception.Create( 'Informe um valor válido!' );
+  except
+    raise Exception.Create( 'Informe um valor válido!' );
+  end;
+end;
+
+end.

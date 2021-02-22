@@ -1,0 +1,31 @@
+object frm_main: Tfrm_main
+  Left = 0
+  Top = 0
+  Caption = 'M'#225'quina Dinheiro'
+  ClientHeight = 413
+  ClientWidth = 569
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 569
+    Height = 413
+    Align = alClient
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitLeft = 320
+    ExplicitTop = 248
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+  end
+end

@@ -1,0 +1,64 @@
+object frm_main: Tfrm_main
+  Left = 0
+  Top = 0
+  Caption = 'M'#225'quina Dinheiro'
+  ClientHeight = 399
+  ClientWidth = 327
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 327
+    Height = 399
+    Align = alClient
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitLeft = 8
+    ExplicitTop = -32
+    object btnTroco: TSpeedButton
+      Left = 224
+      Top = 39
+      Width = 89
+      Height = 22
+      Caption = 'Troco'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      OnClick = btnTrocoClick
+    end
+    object edvalor: TLabeledEdit
+      Left = 16
+      Top = 40
+      Width = 121
+      Height = 21
+      EditLabel.Width = 58
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Valor Troco:'
+      TabOrder = 0
+      OnExit = edvalorExit
+    end
+    object edResultado: TMemo
+      Left = 16
+      Top = 85
+      Width = 297
+      Height = 196
+      ReadOnly = True
+      TabOrder = 1
+    end
+  end
+end
